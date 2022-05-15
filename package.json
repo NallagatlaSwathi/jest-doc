@@ -4,9 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|ts|tsx|json)\"",
+    "prettier:write": "npm run prettier -- --write",
+    "prettier:validate": "npm run prettier -- --list-different",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.6.2"
+  }
 }
