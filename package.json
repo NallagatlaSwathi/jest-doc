@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|ts|tsx|json)\"",
     "prettier:write": "npm run prettier -- --write",
@@ -12,7 +13,7 @@
     "build": "npm-run-all clean babel",
     "check-types": "tsc",
     "validate": "npm-run-all prettier:write --parallel check-types build test",
-    "test": "cross-env NODE_ENV=test jest --notify"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules NODE_ENV=test jest --notify"
   },
   "keywords": [],
   "author": "",
