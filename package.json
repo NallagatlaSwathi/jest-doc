@@ -10,7 +10,7 @@
     "babel": "babel src --out-dir dist",
     "clean": "rimraf dist",
     "build": "npm-run-all clean babel",
-    "test": "jest --notify"
+    "test": "cross-env NODE_ENV=test jest --notify"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +25,10 @@
     "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
     "ts-node": "^10.7.0",
-    "typescript": "^4.6.4"
+    "typescript": "^4.6.4",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
   }
 }
