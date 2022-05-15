@@ -3,8 +3,6 @@ const {merge} = require('webpack-merge')
 const config = api => {
   const isTest = api.env('test')
 
-  console.log({isTest})
-
   const commonConfig = {
     presets: [
       [
@@ -20,6 +18,7 @@ const config = api => {
           corejs: '3.6.4',
         },
       ],
+      '@babel/preset-typescript',
     ],
   }
 
