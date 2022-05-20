@@ -1,4 +1,3 @@
-const a = require('./module')
-const something = require('./something')
+const utilsPath = require.resolve('./utils')
 
-console.log('Hello')
+console.log(utilsPath)
