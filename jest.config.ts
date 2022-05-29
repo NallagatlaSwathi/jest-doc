@@ -103,7 +103,7 @@ export default {
   // preset: undefined,
 
   // Run tests from one or more projects
-  projects: ['./other/jest.config.js', './other/jest.no-framework.config.js'],
+  // projects: ['./jest.config.js', './other/jest.no-framework.config.js'],
 
   // Use this configuration option to add custom reporters to Jest
   // reporters: undefined,
@@ -135,7 +135,7 @@ export default {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: [],
+  setupFilesAfterEnv: ['./jest.setup.js'],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
