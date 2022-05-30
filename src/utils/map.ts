@@ -1,7 +1,10 @@
-function map<T>(arr: readonly T[], transformFunction: (element: T) => any) {
+function map<T, U>(
+  array: readonly T[],
+  transformFunction: (element: T) => U,
+): U[] {
   const output = []
-  for (let index = 0; index < arr.length; index++) {
-    const returnValue = transformFunction(arr[index])
+  for (let index = 0; index < array.length; index++) {
+    const returnValue = transformFunction(array[index])
     output.push(returnValue)
   }
   return output
